@@ -34,7 +34,7 @@ function AutoClicker({ branch, date, time }) {
   // ฟังก์ชันสำหรับดึงสถานะ Process ที่กำลังทำงานอยู่จาก Backend
   const fetchActiveProcesses = async () => {
     try {
-      const response = await fetch('http://localhost:5000/get-active-processes');
+      const response = await fetch('http://localhost:5000/get-active-processes'); // <--- URL นี้จะถูกเปลี่ยนใน executeBookingProcess
       const data = await response.json();
       if (data.status === 'success') {
         const backendActiveIds = new Set(data.activeProcesses);
@@ -151,7 +151,8 @@ function AutoClicker({ branch, date, time }) {
         [processId]: { browserType, status: 'running' }
     }));
     try {
-      const response = await fetch('http://localhost:5000/start-booking-process', {
+      // *** เปลี่ยน URL ตรงนี้ ***
+      const response = await fetch('https://booking-automation-backend.onrender.com/start-booking-process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -199,7 +200,8 @@ function AutoClicker({ branch, date, time }) {
 
   const handleStopProcess = async (processId) => {
     try {
-      const response = await fetch('http://localhost:5000/stop-booking-process', {
+      // *** เปลี่ยน URL ตรงนี้ ***
+      const response = await fetch('https://booking-automation-backend.onrender.com/stop-booking-process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
