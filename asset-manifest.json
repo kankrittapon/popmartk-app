@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/popmartk-app/static/css/main.e6c13ad2.css",
+    "main.js": "/popmartk-app/static/js/main.8f2863b3.js",
+    "static/js/453.bddf04f5.chunk.js": "/popmartk-app/static/js/453.bddf04f5.chunk.js",
+    "index.html": "/popmartk-app/index.html",
+    "main.e6c13ad2.css.map": "/popmartk-app/static/css/main.e6c13ad2.css.map",
+    "main.8f2863b3.js.map": "/popmartk-app/static/js/main.8f2863b3.js.map",
+    "453.bddf04f5.chunk.js.map": "/popmartk-app/static/js/453.bddf04f5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.8f2863b3.js"
+  ]
+}
